@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0612">
+<title>ORPON AURA TOP UP | ফ্রি ফায়ার ডায়মন্ড টপ-আপ</title>
+<style>
+:root{--bg:#07040f;--bg2:#100a1f;--card:#150d2b;--p:#a855f7;--p2:#7c3aed;--pink:#e879f9;--txt:#f3ecff;--mut:#a79bc4;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--glow:0 0 18px rgba(168,85,247,.55)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:"Hind Siliguri","Noto Sans Bengali","Kalpurush",system-ui,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,rgba(124,58,237,.28),transparent),radial-gradient(900px 500px at -10% 30%,rgba(232,121,249,.14),transparent),var(--bg);color:var(--txt);min-height:100vh;line-height:1.55;padding-bottom:84px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;color:inherit}
+input,select{font-family:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 16px}
+header{position:sticky;top:0;z-index:50;background:rgba(7,4,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,85,247,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.5px;font-size:17px}
+.logo .gem{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,var(--p),var(--pink));box-shadow:var(--glow);animation:pulse 2.4s infinite}
+.logo span b{color:var(--pink);text-shadow:0 0 10px var(--p)}
+.links{display:flex;gap:6px}
+.links a,.links button{padding:8px 12px;border-radius:10px;background:transparent;font-size:14px;color:var(--mut);transition:.2s}
+.links a:hover,.links button:hover{color:#fff;background:rgba(168,85,247,.18)}
+@media(max-width:640px){.links a.hide-m{display:none}}
+.hero{padding:42px 0 26px;text-align:center}
+.hero h1{font-size:clamp(28px,7vw,52px);font-weight:900;line-height:1.15;background:linear-gradient(90deg,#fff,var(--pink),var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(168,85,247,.5))}
+.hero p{color:var(--mut);margin:12px auto 20px;max-width:520px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:700;font-size:15px;background:linear-gradient(135deg,var(--p2),var(--p));box-shadow:var(--glow);transition:.2s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(168,85,247,.8)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;border:1px solid var(--p);box-shadow:none}
+.btn.wa{background:linear-gradient(135deg,#128c7e,#25d366);box-shadow:0 0 16px rgba(37,211,102,.45)}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:9px}
+.btn.danger{background:linear-gradient(135deg,#991b1b,var(--bad));box-shadow:none}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.badge{font-size:12.5px;padding:6px 12px;border-radius:99px;background:rgba(168,85,247,.14);border:1px solid rgba(168,85,247,.35)}
+h2.sec{font-size:22px;margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+h2.sec::before{content:"";width:5px;height:22px;border-radius:4px;background:linear-gradient(var(--pink),var(--p2));box-shadow:var(--glow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+.pkg{background:linear-gradient(160deg,var(--card),#0e0820);border:1px solid rgba(168,85,247,.28);border-radius:16px;padding:16px 12px;text-align:center;cursor:pointer;position:relative;transition:.25s;overflow:hidden;animation:rise .5s both}
+.pkg:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:var(--glow)}
+.pkg.sel{border-color:var(--pink);box-shadow:0 0 0 2px var(--pink),var(--glow)}
+.pkg .ic{font-size:30px;filter:drop-shadow(0 0 10px var(--p));animation:float 3s ease-in-out infinite}
+.pkg .amt{font-size:20px;font-weight:800;margin-top:4px}
+.pkg .amt small{display:block;font-size:12px;color:var(--mut);font-weight:500}
+.pkg .pr{margin-top:8px;font-weight:800;color:var(--pink);font-size:18px}
+.pkg .tag{position:absolute;top:8px;right:8px;font-size:10.5px;padding:2px 8px;border-radius:99px;background:var(--p2)}
+.panel{background:linear-gradient(160deg,var(--card),#0d0719);border:1px solid rgba(168,85,247,.3);border-radius:18px;padding:18px;margin-top:14px}
+label.l{display:block;font-size:14px;color:var(--mut);margin:12px 0 6px}
+.in{width:100%;padding:13px 14px;border-radius:12px;background:#0b0616;border:1px solid rgba(168,85,247,.35);color:var(--txt);font-size:16px;outline:none;transition:.2s}
+.in:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(232,121,249,.18)}
+.note{font-size:13px;color:var(--mut);margin-top:6px}
+.status{margin-top:8px;padding:10px 12px;border-radius:10px;font-size:14px;display:none}
+.status.show{display:block}
+.status.ok{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+.status.warn{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.4)}
+.status.bad{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pm{padding:14px;border-radius:14px;border:1px solid rgba(168,85,247,.35);background:#0b0616;text-align:center;font-weight:700;cursor:pointer;transition:.2s}
+.pm.sel{border-color:var(--pink);box-shadow:0 0 0 2px var(--pink)}
+.pm.bk b{color:#ff4fa3}.pm.ng b{color:#ffa94d}
+.numbox{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#0b0616;border:1px dashed var(--p);border-radius:12px;padding:12px;margin-top:10px;font-size:18px;font-weight:800;letter-spacing:1px}
+.sum{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(168,85,247,.25);font-size:15px}
+.sum:last-child{border:0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.step{padding:14px;border-radius:14px;background:var(--card);border:1px solid rgba(168,85,247,.22);font-size:14px}
+.step i{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--p2);font-style:normal;font-weight:800;margin-bottom:6px;box-shadow:var(--glow)}
+.ord{padding:14px;border-radius:14px;background:var(--card);border:1px solid rgba(168,85,247,.25);margin-top:10px;font-size:14px}
+.ord .top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.st{padding:3px 10px;border-radius:99px;font-size:12.5px;font-weight:700}
+.st.pending{background:rgba(245,158,11,.18);color:#fbbf24}.st.processing{background:rgba(59,130,246,.2);color:#60a5fa}.st.done{background:rgba(34,197,94,.2);color:#4ade80}.st.cancelled{background:rgba(239,68,68,.2);color:#f87171}
+footer{margin-top:40px;padding:26px 0;border-top:1px solid rgba(168,85,247,.2);text-align:center;color:var(--mut);font-size:13px}
+.wafab{position:fixed;right:16px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#128c7e,#25d366);box-shadow:0 0 22px rgba(37,211,102,.6);animation:pulse 2s infinite;font-size:28px}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.75);display:none;align-items:flex-end;justify-content:center}
+.modal.show{display:flex}
+.box{width:100%;max-width:560px;max-height:92vh;overflow:auto;background:var(--bg2);border:1px solid var(--p);border-radius:20px 20px 0 0;padding:18px;animation:up .3s}
+@media(min-width:700px){.modal{align-items:center}.box{border-radius:20px}}
+.box h3{margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.x{background:rgba(168,85,247,.2);width:34px;height:34px;border-radius:50%;font-size:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+td,th{padding:8px 6px;border-bottom:1px solid rgba(168,85,247,.2);text-align:left;vertical-align:middle}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(30px);background:#1d1038;border:1px solid var(--p);padding:11px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.3s;z-index:200;font-size:14px;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%)}
+@keyframes pulse{0%,100%{box-shadow:0 0 10px rgba(168,85,247,.5)}50%{box-shadow:0 0 26px rgba(232,121,249,.9)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#top"><div class="gem">💎</div><span>ORPON AURA <b>TOP UP</b></span></a>
+  <nav class="links">
+    <a href="#packages" class="hide-m">প্যাকেজ</a>
+    <a href="#order" class="hide-m">অর্ডার</a>
+    <button onclick="openHistory()">📦 অর্ডার হিস্টোরি</button>
+    <button onclick="openAdmin()">⚙️</button>
+  </nav>
+</div></header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <h1>ফ্রি ফায়ার ডায়মন্ড টপ-আপ<br>সহজ, দ্রুত ও নির্ভরযোগ্য</h1>
+    <p>আপনার পছন্দের প্যাকেজ বেছে নিন, UID দিন, পেমেন্ট করুন — বাকিটা আমরা দেখছি।</p>
+    <a class="btn" href="#packages">💎 এখনই টপ-আপ করুন</a>
+    <a class="btn wa" style="margin-left:8px" href="#" onclick="openWA();return false">💬 WhatsApp</a>
+    <div class="badges"><span class="badge">⚡ দ্রুত সার্ভিস</span><span class="badge">🔒 নিরাপদ</span><span class="badge">📱 বিকাশ / নগদ</span><span class="badge">🎧 সাপোর্ট</span></div>
+  </section>
+
+  <h2 class="sec" id="packages">💎 ডায়মন্ড প্যাকেজ</h2>
+  <div class="grid" id="diaGrid"></div>
+
+  <h2 class="sec">👑 মেম্বারশিপ প্যাকেজ</h2>
+  <div class="grid" id="memGrid"></div>
+
+  <h2 class="sec" id="order">🛒 অর্ডার করুন</h2>
+  <div class="panel">
+    <div class="sum"><span>নির্বাচিত প্যাকেজ</span><b id="sPkg">— নির্বাচন করুন —</b></div>
+    <div class="sum"><span>মোট মূল্য</span><b id="sPrice" style="color:var(--pink)">০ টাকা</b></div>
+
+    <label class="l">Free Fire UID</label>
+    <input class="in" id="uid" inputmode="numeric" placeholder="আপনার UID লিখুন" maxlength="14" autocomplete="off">
+    <div class="status" id="uidStatus"></div>
+
+    <label class="l">আপনার মোবাইল নম্বর (অর্ডার ট্র্যাক করতে)</label>
+    <input class="in" id="phone" inputmode="tel" placeholder="01XXXXXXXXX" maxlength="11" autocomplete="off">
+
+    <label class="l">পেমেন্ট পদ্ধতি</label>
+    <div class="pay">
+      <div class="pm bk" data-m="bkash" onclick="pickPay('bkash')">📲 <b>বিকাশ</b></div>
+      <div class="pm ng" data-m="nagad" onclick="pickPay('nagad')">📲 <b>নগদ</b></div>
+    </div>
+    <div id="payInfo" style="display:none">
+      <div class="note" id="payHint"></div>
+      <div class="numbox"><span id="payNum"></span><button class="btn sm" onclick="copyNum()">কপি</button></div>
+      <div class="note">উপরের নম্বরে <b>Send Money</b> করুন, তারপর নিচে Transaction ID লিখুন।</div>
+      <label class="l">Transaction ID</label>
+      <input class="in" id="trx" placeholder="যেমন: 8N7A6D5C4B" maxlength="20" autocapitalize="characters" autocomplete="off">
+    </div>
+    <button class="btn" style="width:100%;margin-top:16px" id="confirmBtn" onclick="confirmOrder()">✅ অর্ডার কনফার্ম করুন</button>
+  </div>
+
+  <h2 class="sec">📋 অর্ডার করার নিয়ম</h2>
+  <div class="steps">
+    <div class="step"><i>১</i><br>প্যাকেজ নির্বাচন করুন</div>
+    <div class="step"><i>২</i><br>Free Fire UID লিখুন</div>
+    <div class="step"><i>৩</i><br>গেমের নাম যাচাই করুন</div>
+    <div class="step"><i>৪</i><br>পেমেন্ট পদ্ধতি বাছুন</div>
+    <div class="step"><i>৫</i><br>পেমেন্ট করুন</div>
+    <div class="step"><i>৬</i><br>Transaction ID লিখুন</div>
+    <div class="step"><i>৭</i><br>অর্ডার কনফার্ম করুন</div>
+  </div>
+</main>
+
+<footer><div class="wrap">© ORPON AURA TOP UP • সব অধিকার সংরক্ষিত<br>এটি Garena-র অফিসিয়াল ওয়েবসাইট নয়।</div></footer>
+
+<a class="wafab" href="#" onclick="openWA();return false" aria-label="WhatsApp">💬</a>
+
+<!-- অর্ডার হিস্টোরি -->
+<div class="modal" id="mHist"><div class="box">
+  <h3>📦 আমার অর্ডার <button class="x" onclick="closeM('mHist')">✕</button></h3>
+  <input class="in" id="hPhone" inputmode="tel" placeholder="অর্ডারের মোবাইল নম্বর লিখুন" maxlength="11">
+  <button class="btn" style="width:100%;margin-top:10px" onclick="renderHistory()">অর্ডার দেখুন</button>
+  <div id="hList"></div>
+</div></div>
+
+<!-- অ্যাডমিন -->
+<div class="modal" id="mAdmin"><div class="box">
+  <h3>⚙️ অ্যাডমিন প্যানেল <button class="x" onclick="closeM('mAdmin')">✕</button></h3>
+  <div id="adLogin">
+    <div class="note" id="adMsg"></div>
+    <input class="in" id="adPass" type="password" placeholder="পাসওয়ার্ড" style="margin-top:8px">
+    <button class="btn" style="width:100%;margin-top:10px" onclick="adminLogin()">প্রবেশ করুন</button>
+  </div>
+  <div id="adMain" style="display:none">
+    <div class="row" style="margin-bottom:10px">
+      <button class="btn sm" onclick="adTab('orders')">অর্ডার</button>
+      <button class="btn sm ghost" onclick="adTab('prices')">দাম</button>
+      <button class="btn sm ghost" onclick="adTab('add')">নতুন প্যাকেজ</button>
+      <button class="btn sm ghost" onclick="adTab('set')">সেটিংস</button>
+      <button class="btn sm danger" onclick="adminLogout()">লগআউট</button>
+    </div>
+    <div id="adBody"></div>
+  </div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== কনফিগারেশন =====
+ গোপন API Key কখনো এখানে বসাবেন না।
+ নিজের সার্ভার/Cloudflare Worker-এর URL বসান — Key সেখানে লুকানো থাকবে। */
+const CONFIG = {
+  WHATSAPP: "8801738882468",
+  PAY: { bkash: "01868403561", nagad: "01738882468" },
+  LOOKUP_URL: "",   // উদাহরণ: https://your-worker.workers.dev/lookup?uid=
+  DELIVERY_URL: ""  // উদাহরণ: https://your-worker.workers.dev/deliver
+};
+
+const LS = { pk:"oat_packages", od:"oat_orders", ad:"oat_admin_hash", ss:"oat_admin_session" };
+const DEFAULTS = [
+  {id:"d1",type:"dia",name:"১০০ ডায়মন্ড",price:85},
+  {id:"d2",type:"dia",name:"৩১০ ডায়মন্ড",price:240},
+  {id:"d3",type:"dia",name:"৫২০ ডায়মন্ড",price:380},
+  {id:"d4",type:"dia",name:"১০৬০ ডায়মন্ড",price:760},
+  {id:"d5",type:"dia",name:"২১৮০ ডায়মন্ড",price:1520},
+  {id:"d6",type:"dia",name:"৫৬০০ ডায়মন্ড",price:3800},
+  {id:"m1",type:"mem",name:"উইকলি মেম্বারশিপ",price:155},
+  {id:"m2",type:"mem",name:"মান্থলি মেম্বারশিপ",price:790}
+];
+const STATUS = {pending:"পেন্ডিং",processing:"প্রসেসিং",done:"সম্পন্ন",cancelled:"বাতিল"};
+const $ = id => document.getElementById(id);
+const load = (k,d) => { try{ const v=JSON.parse(localStorage.getItem(k)); return v ?? d; }catch(e){ return d; } };
+const save = (k,v) => { try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){ toast("ডেটা সেভ করা যায়নি"); } };
+const bn = n => String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
+const money = n => bn(Number(n).toLocaleString("en-US"))+" টাকা";
+const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const toBn = s => String(s).replace(/[০-৯]/g,d=>"০১২৩৪৫৬৭৮৯".indexOf(d));
+
+let packages = load(LS.pk, null) || DEFAULTS;
+let selected = null, payMethod = null, uidVerified = null, uidTimer = null, adTabName = "orders";
+
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),2600); }
+function closeM(id){ $(id).classList.remove("show"); }
+function openM(id){ $(id).classList.add("show"); }
+document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{ if(e.target===m) m.classList.remove("show"); }));
+
+function openWA(msg){
+  const t = msg || "আসসালামু আলাইকুম, ORPON AURA TOP UP থেকে ডায়মন্ড টপ-আপ করতে চাই।";
+  window.open("https://wa.me/"+CONFIG.WHATSAPP+"?text="+encodeURIComponent(t),"_blank");
+}
+
+/* ===== প্যাকেজ ===== */
+function renderPackages(){
+  const mk = list => list.map((p,i)=>`
+    <div class="pkg ${selected&&selected.id===p.id?"sel":""}" style="animation-delay:${i*60}ms" onclick="selectPkg('${p.id}')">
+      ${p.type==="mem"?'<span class="tag">মেম্বারশিপ</span>':''}
+      <div class="ic">${p.type==="mem"?"👑":"💎"}</div>
+      <div class="amt">${esc(p.name)}</div>
+      <div class="pr">${money(p.price)}</div>
+    </div>`).join("");
+  $("diaGrid").innerHTML = mk(packages.filter(p=>p.type==="dia"));
+  $("memGrid").innerHTML = mk(packages.filter(p=>p.type==="mem"));
+}
+function selectPkg(id){
+  selected = packages.find(p=>p.id===id)||null;
+  renderPackages(); updateSummary();
+  $("order").scrollIntoView({behavior:"smooth"});
+}
+function updateSummary(){
+  $("sPkg").textContent = selected ? selected.name : "— নির্বাচন করুন —";
+  $("sPrice").textContent = selected ? money(selected.price) : "০ টাকা";
+}
+
+/* ===== UID যাচাই ===== */
+function setStatus(cls,msg){ const s=$("uidStatus"); s.className="status show "+cls; s.innerHTML=msg; }
+$("uid").addEventListener("input",e=>{
+  e.target.value = toBn(e.target.value).replace(/\D/g,"");
+  uidVerified = null; clearTimeout(uidTimer);
+  const v = e.target.value;
+  if(v.length<6){ $("uidStatus").className="status"; return; }
+  uidTimer = setTimeout(()=>lookupUID(v),500);
+});
+async function lookupUID(uid){
+  if(!CONFIG.LOOKUP_URL){
+    setStatus("warn","⚠️ গেমের নাম স্বয়ংক্রিয়ভাবে যাচাই করা এখন চালু নেই। UID সঠিক কিনা নিজে আবার দেখে নিন।");
+    return;
+  }
+  setStatus("warn","🔎 নাম খোঁজা হচ্ছে...");
+  try{
+    const r = await fetch(CONFIG.LOOKUP_URL+encodeURIComponent(uid));
+    if(!r.ok) throw 0;
+    const d = await r.json();
+    if($("uid").value!==uid) return;
+    const name = d && (d.nickname||d.name);
+    if(!name) throw 0;
+    uidVerified = name;
+    setStatus("ok","✅ গেমের নাম: <b>"+esc(name)+"</b>");
+  }catch(e){
+    setStatus("bad","❌ নাম পাওয়া যায়নি। UID সঠিক কিনা দেখুন।");
+  }
+}
+
+/* ===== পেমেন্ট ===== */
+function pickPay(m){
+  payMethod = m;
+  document.querySelectorAll(".pm").forEach(x=>x.classList.toggle("sel",x.dataset.m===m));
+  $("payInfo").style.display="block";
+  $("payNum").textContent = CONFIG.PAY[m];
+  $("payHint").textContent = (m==="bkash"?"বিকাশ":"নগদ")+" নম্বর (Send Money):";
+}
+function copyNum(){
+  const n = CONFIG.PAY[payMethod]; if(!n) return;
+  if(navigator.clipboard) navigator.clipboard.writeText(n).then(()=>toast("নম্বর কপি হয়েছে ✅"),()=>toast("কপি করা যায়নি"));
+  else toast("নম্বর: "+n);
+}
+
+/* ===== অর্ডার ===== */
+const getOrders = () => load(LS.od, []);
+function confirmOrder(){
+  const uid=$("uid").value.trim(), phone=toBn($("phone").value.trim()).replace(/\D/g,""), trx=$("trx").value.trim().toUpperCase();
+  if(!selected) return toast("আগে একটি প্যাকেজ নির্বাচন করুন");
+  if(uid.length<6) return toast("সঠিক Free Fire UID লিখুন");
+  if(!/^01\d{9}$/.test(phone)) return toast("সঠিক ১১ সংখ্যার মোবাইল নম্বর দিন");
+  if(!payMethod) return toast("পেমেন্ট পদ্ধতি নির্বাচন করুন");
+  if(trx.length<6) return toast("সঠিক Transaction ID লিখুন");
+  const orders = getOrders();
+  if(orders.some(o=>o.trx===trx)) return toast("এই Transaction ID দিয়ে আগেই অর্ডার করা হয়েছে");
+  const o = {
+    id:"OAT"+Date.now().toString().slice(-8), pkg:selected.name, price:selected.price,
+    uid, gameName:uidVerified||"", phone, method:payMethod, trx, status:"pending", at:new Date().toISOString(), note:""
+  };
+  orders.unshift(o); save(LS.od,orders);
+  const msg = `নতুন অর্ডার — ORPON AURA TOP UP\nঅর্ডার আইডি: ${o.id}\nপ্যাকেজ: ${o.pkg}\nমূল্য: ${o.price} টাকা\nUID: ${o.uid}\n${o.gameName?"গেমের নাম: "+o.gameName+"\n":""}পেমেন্ট: ${payMethod==="bkash"?"বিকাশ":"নগদ"}\nTransaction ID: ${o.trx}\nমোবাইল: ${o.phone}`;
+  $("uid").value="";$("trx").value="";$("uidStatus").className="status";
+  uidVerified=null;selected=null;payMethod=null;
+  document.querySelectorAll(".pm").forEach(x=>x.classList.remove("sel"));
+  $("payInfo").style.display="none";
+  renderPackages();updateSummary();
+  toast("🎉 অর্ডার গ্রহণ করা হয়েছে! আইডি: "+o.id);
+  if(confirm("অর্ডার সেভ হয়েছে।\nদ্রুত প্রসেস করতে অর্ডারের তথ্য WhatsApp-এ পাঠাবেন?")) openWA(msg);
+}
+
+/* ===== অর্ডার হিস্টোরি ===== */
+function openHistory(){ openM("mHist"); const p=$("phone").value; if(p) $("hPhone").value=p; }
+function ordCard(o,admin){
+  return `<div class="ord">
+    <div class="top"><b>${esc(o.id)}</b><span class="st ${o.status}">${STATUS[o.status]}</span></div>
+    <div>${esc(o.pkg)} — ${money(o.price)}</div>
+    <div class="note">UID: ${esc(o.uid)}${o.gameName?" • "+esc(o.gameName):""}</div>
+    <div class="note">${o.method==="bkash"?"বিকাশ":"নগদ"} • TrxID: ${esc(o.trx)}${admin?" • 📞 "+esc(o.phone):""}</div>
+    <div class="note">${bn(new Date(o.at).toLocaleString("en-GB"))}</div>
+    ${o.note?`<div class="note">📝 ${esc(o.note)}</div>`:""}
+  </div>`;
+}
+function renderHistory(){
+  const p = toBn($("hPhone").value).replace(/\D/g,"");
+  if(!/^01\d{9}$/.test(p)) return toast("সঠিক মোবাইল নম্বর লিখুন");
+  const list = getOrders().filter(o=>o.phone===p);
+  $("hList").innerHTML = list.length ? list.map(o=>ordCard(o,false)).join("") : '<div class="note" style="margin-top:12px">এই নম্বরে কোনো অর্ডার পাওয়া যায়নি।</div>';
+}
+
+/* ===== অ্যাডমিন ===== */
+async function sha(s){
+  const b = await crypto.subtle.digest("SHA-256",new TextEncoder().encode("oat::"+s));
+  return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+function openAdmin(){
+  openM("mAdmin");
+  if(sessionStorage.getItem(LS.ss)==="1"){ showAdmin(); return; }
+  $("adLogin").style.display="block"; $("adMain").style.display="none";
+  $("adMsg").textContent = localStorage.getItem(LS.ad) ? "অ্যাডমিন পাসওয়ার্ড দিন।" : "প্রথমবার: নতুন অ্যাডমিন পাসওয়ার্ড সেট করুন (কমপক্ষে ৬ অক্ষর)।";
+}
+async function adminLogin(){
+  const pw = $("adPass").value;
+  if(pw.length<6) return toast("কমপক্ষে ৬ অক্ষরের পাসওয়ার্ড দিন");
+  const h = await sha(pw), stored = localStorage.getItem(LS.ad);
+  if(!stored){ localStorage.setItem(LS.ad,h); }
+  else if(stored!==h) return toast("ভুল পাসওয়ার্ড ❌");
+  sessionStorage.setItem(LS.ss,"1"); $("adPass").value=""; showAdmin();
+}
+function showAdmin(){ $("adLogin").style.display="none"; $("adMain").style.display="block"; adTab(adTabName); }
+function adminLogout(){ sessionStorage.removeItem(LS.ss); closeM("mAdmin"); toast("লগআউট হয়েছে"); }
+function adTab(t){
+  adTabName=t; const b=$("adBody");
+  if(t==="orders"){
+    const o=getOrders();
+    b.innerHTML = `<div class="note">মোট অর্ডার: ${bn(o.length)}</div>` + (o.length ? o.map(x=>`
+      ${ordCard(x,true)}
+      <div class="row" style="margin-top:6px">
+        <select class="in" style="width:auto;padding:8px" onchange="setStatusOf('${x.id}',this.value)">
+          ${Object.keys(STATUS).map(k=>`<option value="${k}" ${x.status===k?"selected":""}>${STATUS[k]}</option>`).join("")}
+        </select>
+        <button class="btn sm wa" onclick="deliverOrder('${x.id}')">🚀 ডেলিভারি</button>
+        <button class="btn sm danger" onclick="delOrder('${x.id}')">মুছুন</button>
+      </div>`).join("") : '<div class="note">কোনো অর্ডার নেই।</div>');
+  }
+  if(t==="prices"){
+    b.innerHTML = '<table>'+packages.map(p=>`<tr><td>${esc(p.name)}</td><td><input class="in" style="padding:8px;width:90px" type="number" min="1" value="${p.price}" id="pr_${p.id}"></td><td><button class="btn sm" onclick="savePrice('${p.id}')">সেভ</button> <button class="btn sm danger" onclick="delPkg('${p.id}')">✕</button></td></tr>`).join("")+'</table>';
+  }
+  if(t==="add"){
+    b.innerHTML = `<label class="l">প্যাকেজের নাম</label><input class="in" id="npName" placeholder="যেমন: ১২০০ ডায়মন্ড">
+      <label class="l">দাম (টাকা)</label><input class="in" id="npPrice" type="number" min="1" placeholder="দাম">
+      <label class="l">ধরন</label><select class="in" id="npType"><option value="dia">ডায়মন্ড</option><option value="mem">মেম্বারশিপ</option></select>
+      <button class="btn" style="width:100%;margin-top:12px" onclick="addPkg()">➕ প্যাকেজ যুক্ত করুন</button>`;
+  }
+  if(t==="set"){
+    b.innerHTML = `<div class="status show ${CONFIG.LOOKUP_URL?"ok":"warn"}">UID Lookup: ${CONFIG.LOOKUP_URL?"সংযুক্ত":"সংযুক্ত নেই"}</div>
+      <div class="status show ${CONFIG.DELIVERY_URL?"ok":"warn"}">অটো ডেলিভারি: ${CONFIG.DELIVERY_URL?"সংযুক্ত":"সংযুক্ত নেই (ম্যানুয়াল ডেলিভারি)"}</div>
+      <div class="note" style="margin-top:10px">⚠️ এই অ্যাডমিন প্যানেলের ডেটা শুধু এই ব্রাউজারে সেভ থাকে। সব ডিভাইস থেকে অর্ডার দেখতে ব্যাকএন্ড (Firebase/Supabase) লাগবে। অর্ডার WhatsApp-এ আসার ব্যবস্থা তাই রাখা হয়েছে।</div>
+      <label class="l">পাসওয়ার্ড পরিবর্তন</label><input class="in" id="newPw" type="password" placeholder="নতুন পাসওয়ার্ড (৬+ অক্ষর)">
+      <button class="btn" style="width:100%;margin-top:10px" onclick="changePw()">পাসওয়ার্ড বদলান</button>`;
+  }
+}
+function setStatusOf(id,s){ const o=getOrders(),x=o.find(i=>i.id===id); if(!x) return; x.status=s; save(LS.od,o); toast("অবস্থা: "+STATUS[s]); adTab("orders"); }
+function delOrder(id){ if(!confirm("অর্ডারটি মুছবেন?")) return; save(LS.od,getOrders().filter(o=>o.id!==id)); adTab("orders"); }
+function savePrice(id){ const v=Number($("pr_"+id).value); if(!(v>0)) return toast("সঠিক দাম দিন"); packages.find(p=>p.id===id).price=v; save(LS.pk,packages); renderPackages(); if(selected&&selected.id===id) updateSummary(); toast("দাম আপডেট হয়েছে ✅"); }
+function delPkg(id){ if(!confirm("প্যাকেজটি মুছবেন?")) return; packages=packages.filter(p=>p.id!==id); if(selected&&selected.id===id){selected=null;updateSummary();} save(LS.pk,packages); renderPackages(); adTab("prices"); }
+function addPkg(){
+  const name=$("npName").value.trim(), price=Number($("npPrice").value), type=$("npType").value;
+  if(!name||!(price>0)) return toast("নাম ও সঠিক দাম দিন");
+  packages.push({id:"p"+Date.now(),type,name,price}); save(LS.pk,packages); renderPackages(); toast("নতুন প্যাকেজ যুক্ত হয়েছে ✅"); adTab("add");
+}
+async function changePw(){ const v=$("newPw").value; if(v.length<6) return toast("কমপক্ষে ৬ অক্ষর দিন"); localStorage.setItem(LS.ad,await sha(v)); $("newPw").value=""; toast("পাসওয়ার্ড বদলানো হয়েছে ✅"); }
+async function deliverOrder(id){
+  if(!CONFIG.DELIVERY_URL) return toast("অটো ডেলিভারি সংযুক্ত নেই — ম্যানুয়ালি ডেলিভারি দিন");
+  const o=getOrders().find(i=>i.id===id); if(!o) return;
+  try{
+    const r = await fetch(CONFIG.DELIVERY_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({orderId:o.id,uid:o.uid,package:o.pkg,trx:o.trx,method:o.method})});
+    if(!r.ok) throw 0;
+    setStatusOf(id,"done");
+  }catch(e){ toast("ডেলিভারি ব্যর্থ হয়েছে। আবার চেষ্টা করুন।"); }
+}
+
+renderPackages(); updateSummary();
+</script>
+</body>
+</html>
